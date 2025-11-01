@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARES</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+ <!-- Topbar -->
+<div class="topbar d-flex align-items-center justify-content-between px-3">
+  <!-- Left (Address) -->
+  <div class="topbar-left">
+    <i class="bi bi-geo-alt-fill"></i> 123 Rehab Street, Lahore
+  </div>
+
+  <!-- Right (Email, Phone, Days) -->
+  <div class="topbar-right">
+    <a href="mailto:info@pares.com"><i class="bi bi-envelope-fill"></i> info@pares.com</a>
+    <a href="tel:+1234567890"><i class="bi bi-telephone-fill"></i> +1 234 567 890</a>
+    <span class="topbar-days"><i class="bi bi-clock"></i> Mon–Fri</span>
+  </div>
+</div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="p">P</span>
+                <span class="a">A</span>
+                <span class="r">R</span>
+                <span class="e">E</span>
+                <span class="s">S</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="packages.html">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="traning.html">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-feedback" href="#">Feedback</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-book" href="#">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+   <!-- Hero Section with Carousel -->
+<section class="hero-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Column -->
+            <div class="col-md-6 text-white text-center text-md-start">
+                <h1 class="display-4 fw-bold mb-3">Welcome to <span style="color:#d82236;">PARES</span></h1>
+                <p class="lead mb-4">Empowering you with top-notch services and innovative solutions to help your business thrive.</p>
+                <div class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap">
+                    <a href="#services" class="btn btn-book btn-lg">Explore Services</a>
+                    <a href="#contact" class="btn btn-feedback btn-lg">Get in Touch</a>
+                </div>
+            </div>
+            <!-- Carousel Column -->
+            <div class="col-md-6 mt-4 mt-md-0">
+                <div id="heroCarousel" class="carousel slide rounded shadow" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="bg.jpg" class="d-block w-100 hero-img" alt="Slide 1">
+                        </div>
+                    </div>
+                    <!-- Removed arrows -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-wave">
+  <svg viewBox="0 0 1800 60" preserveAspectRatio="none">
+    <path d="M0,30 
+             C100,10 200,50 300,25 
+             S500,50 600,25 
+             S800,50 900,25 
+             S1100,50 1200,25
+             S1400,50 1500,25
+             S1700,50 1800,25" />
+  </svg>
+</div>
+
+
+<!-- Services Section -->
+
+
+
+
+
+
+
+<!-- ======== Services Section (Updated) ======== -->
+<section class="services-section py-5" id="services">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Our Clinical Services</h2>
+      <p class="text-muted">Comprehensive physiotherapy, rehabilitation and pain management by certified professionals.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service Card 1 -->
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <div class="icon-circle mb-3">
+            <i class="bi bi-heart-pulse"></i>
+          </div>
+          <h5>Physical Therapy</h5>
+          <p>Restore movement and relieve pain with personalized physiotherapy sessions designed by experienced clinicians.</p>
+          <ul class="service-list">
+            <li>Musculoskeletal rehabilitation</li>
+            <li>Manual therapy</li>
+            <li>Post-surgical recovery</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <div class="icon-circle mb-3">
+            <i class="bi bi-body-text"></i>
+          </div>
+          <h5>Neurological Rehab</h5>
+          <p>Focused rehabilitation programs for patients recovering from stroke, spinal cord, or brain injuries.</p>
+          <ul class="service-list">
+            <li>Balance & coordination training</li>
+            <li>Neuro-muscular re-education</li>
+            <li>Gait training</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="col-md-4">
+        <div class="service-card h-100">
+          <div class="icon-circle mb-3">
+            <i class="bi bi-person-standing"></i>
+          </div>
+          <h5>Sports Injury Rehab</h5>
+          <p>Helping athletes recover safely and return stronger with advanced pain management and exercise therapy.</p>
+          <ul class="service-list">
+            <li>Injury prevention plans</li>
+            <li>Performance enhancement</li>
+            <li>Return-to-sport protocols</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<div class="section-wave">
+  <svg viewBox="0 0 1800 60" preserveAspectRatio="none">
+    <path d="M0,30 
+             C100,10 200,50 300,25 
+             S500,50 600,25 
+             S800,50 900,25 
+             S1100,50 1200,25
+             S1400,50 1500,25
+             S1700,50 1800,25" />
+  </svg>
+</div>
+
+
+
+
+
+<!-- Your Path to Wellness Section -->
+
+
+
+<!-- ======== Your Path to Wellness (Updated) ======== -->
+<section class="wellness-section py-5" id="wellness">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Left Image -->
+   <div class="col-lg-6 text-center">
+  <img src="th2.jpg" alt="Your Path to Wellness" class="wellness-img img-fluid">
+</div>
+
+
+      <!-- Right Content -->
+      <div class="col-lg-6">
+        <h2 class="mb-3">Your Path to Wellness</h2>
+        <p class="lead text-muted mb-4">
+          At <strong>PARES Physiotherapy & Rehabilitation</strong>, our approach combines science, compassion, and care to help you regain strength, restore mobility, and live pain-free.
+        </p>
+
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-icon"><i class="bi bi-person-vcard"></i></div>
+            <div class="step-content">
+              <h5>1. Initial Assessment</h5>
+              <p>We begin with a thorough clinical evaluation to understand your condition, pain levels, and movement patterns.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-icon"><i class="bi bi-activity"></i></div>
+            <div class="step-content">
+              <h5>2. Personalized Treatment Plan</h5>
+              <p>Our team designs a tailored rehabilitation plan using evidence-based techniques suited to your goals.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-icon"><i class="bi bi-heart-pulse"></i></div>
+            <div class="step-content">
+              <h5>3. Guided Recovery</h5>
+              <p>Through hands-on therapy, exercise guidance, and education, we help you recover confidently and safely.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-icon"><i class="bi bi-stars"></i></div>
+            <div class="step-content">
+              <h5>4. Long-Term Wellness</h5>
+              <p>We ensure your progress continues with preventive care, posture training, and ongoing support.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-book mt-3">Book Your Assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="section-wave">
+  <svg viewBox="0 0 1800 60" preserveAspectRatio="none">
+    <path d="M0,30 
+             C100,10 200,50 300,25 
+             S500,50 600,25 
+             S800,50 900,25 
+             S1100,50 1200,25
+             S1400,50 1500,25
+             S1700,50 1800,25" />
+  </svg>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======== Gallery Section (Upgraded) ======== -->
+<section class="gallery-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold section-title">Our Gallery</h2>
+      <p class="lead text-muted">A glimpse into our therapy sessions, training programs, and community moments.</p>
+    </div>
+
+    <!-- Scrolling Gallery -->
+    <div class="scroll-gallery">
+      <div class="gallery-track">
+        <!-- Repeatable gallery items -->
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="dgf.jpg">
+          <img src="dgf.jpg" alt="Gallery 1">
+          <div class="overlay"><i class="bi bi-search"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="https://images.unsplash.com/photo-1588776814546-ec07bfd635a4?auto=format&fit=crop&w=1000&q=80">
+          <img src="https://images.unsplash.com/photo-1588776814546-ec07bfd635a4?auto=format&fit=crop&w=400&q=80" alt="Gallery 2">
+          <div class="overlay"><i class="bi bi-search"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1000&q=80">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=400&q=80" alt="Gallery 3">
+          <div class="overlay"><i class="bi bi-search"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="https://images.unsplash.com/photo-1605296867724-4f6764f81b52?auto=format&fit=crop&w=1000&q=80">
+          <img src="https://images.unsplash.com/photo-1605296867724-4f6764f81b52?auto=format&fit=crop&w=400&q=80" alt="Gallery 4">
+          <div class="overlay"><i class="bi bi-search"></i></div>
+        </div>
+
+        <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#previewModal" data-img="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1000&q=80">
+          <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=400&q=80" alt="Gallery 5">
+          <div class="overlay"><i class="bi bi-search"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0 shadow-none">
+            <img id="previewImage" src="" class="img-fluid rounded" alt="Preview">
+        </div>
+    </div>
+</div>
+
+<div class="section-wave">
+  <svg viewBox="0 0 1800 60" preserveAspectRatio="none">
+    <path d="M0,30 
+             C100,10 200,50 300,25 
+             S500,50 600,25 
+             S800,50 900,25 
+             S1100,50 1200,25
+             S1400,50 1500,25
+             S1700,50 1800,25" />
+  </svg>
+</div>
+
+
+
+
+
+
+
+<!-- 🌟 Testimonials Section -->
+<section class="testimonials-section py-5 position-relative">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold section-title">What Our Clients Say</h2>
+      <p class="lead text-muted">Real stories from people whose lives have been transformed through our care and support.</p>
+    </div>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-card text-center text-md-start">
+            <div class="row align-items-center">
+              <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Ahmed" class="testimonial-img shadow">
+              </div>
+              <div class="col-md-8">
+                <i class="bi bi-quote quote-icon"></i>
+                <p class="testimonial-text">
+                  “PARES has been a life-changer! The physiotherapy sessions helped me regain my mobility and confidence. 
+                  The team’s dedication is beyond words.”
+                </p>
+               
+                <h5 class="fw-bold text-primary mb-0">Sarah Ahmed</h5>
+                <p class="text-muted small">Physiotherapy Client</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-card text-center text-md-start">
+            <div class="row align-items-center">
+              <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Ali Raza" class="testimonial-img shadow">
+              </div>
+              <div class="col-md-8">
+                <i class="bi bi-quote quote-icon"></i>
+                <p class="testimonial-text">
+                  “The autism rehabilitation program was exceptional. My son made wonderful progress thanks to their compassionate and skilled therapists.”
+                </p>
+                
+                <h5 class="fw-bold text-primary mb-0">Ali Raza</h5>
+                <p class="text-muted small">Parent of Autism Program Child</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-card text-center text-md-start">
+            <div class="row align-items-center">
+              <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Maria Khan" class="testimonial-img shadow">
+              </div>
+              <div class="col-md-8">
+                <i class="bi bi-quote quote-icon"></i>
+                <p class="testimonial-text">
+                  “The education and training services here gave me the confidence and skills to move forward. 
+                  The staff truly care about your growth and success.”
+                </p>
+              
+                <h5 class="fw-bold text-primary mb-0">Maria Khan</h5>
+                <p class="text-muted small">Education & Training Participant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon shadow-sm"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon shadow-sm"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Optional Wave Divider -->
+
+
+
+
+
+
+</section>
+
+
+
+
+<div class="section-wave">
+  <svg viewBox="0 0 1800 60" preserveAspectRatio="none">
+    <path d="M0,30 
+             C100,10 200,50 300,25 
+             S500,50 600,25 
+             S800,50 900,25 
+             S1100,50 1200,25
+             S1400,50 1500,25
+             S1700,50 1800,25" />
+  </svg>
+</div>
+
+
+
+
+
+
+<!-- Achievements / Certifications / Partners Section -->
+<section class="achievements-section py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold section-title mb-4">Our Achievements & Partners</h2>
+    <p class="lead text-muted mb-5">
+      We’re proud to collaborate with leading organizations and hold certifications that reflect our commitment to excellence.
+    </p>
+
+    <div class="row g-4 justify-content-center align-items-center">
+      <!-- Certificate 1 -->
+      <div class="col-6 col-md-3">
+        <div class="achievement-card">
+          <img src="cert1.png" alt="Certificate 1" class="img-fluid">
+          <p class="mt-2">Certified Rehabilitation Center</p>
+        </div>
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="col-6 col-md-3">
+        <div class="achievement-card">
+          <img src="cert2.png" alt="Certificate 2" class="img-fluid">
+          <p class="mt-2">Recognized by Health Authority</p>
+        </div>
+      </div>
+
+      <!-- Partner 1 -->
+      <div class="col-6 col-md-3">
+        <div class="achievement-card">
+          <img src="partner1.png" alt="Partner 1" class="img-fluid">
+          <p class="mt-2">Partnered with Wellness Network</p>
+        </div>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="col-6 col-md-3">
+        <div class="achievement-card">
+          <img src="partner2.png" alt="Partner 2" class="img-fluid">
+          <p class="mt-2">Member of Autism Support Alliance</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="section-wave">
+  <svg viewBox="0 0 1800 60" preserveAspectRatio="none">
+    <path d="M0,30 
+             C100,10 200,50 300,25 
+             S500,50 600,25 
+             S800,50 900,25 
+             S1100,50 1200,25
+             S1400,50 1500,25
+             S1700,50 1800,25" />
+  </svg>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- About Us Section -->
+<!-- About Us Section -->
+<section class="about-section py-5" id="about">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <!-- Logo Column -->
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="about-logo-wrapper">
+          <a class="navbar-brand fw-bold" href="#">
+            <span class="p">P</span>
+            <span class="a">A</span>
+            <span class="r">R</span>
+            <span class="e">E</span>
+            <span class="s">S</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="col-md-6">
+        <div class="about-content">
+          <h2 class="fw-bold mb-3 section-title">About <span class="text-accent">PARES</span></h2>
+          <p class="lead text-muted mb-3">
+            At <strong>PARES</strong>, we are committed to transforming lives through professional care and compassion.
+            Our team of specialists provides evidence-based therapies that enhance mobility, communication, and learning.
+          </p>
+          <p class="text-muted">
+            We take pride in creating personalized rehabilitation programs designed to support individuals of all ages. 
+            Our mission is to empower our clients towards independence, confidence, and overall well-being.
+          </p>
+          <a href="#services" class="btn btn-book mt-3">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- 🌿 Footer -->
+<footer class="footer-section text-center text-lg-start mt-5">
+  <div class="footer-divider"></div>
+
+  <div class="container py-5">
+    <div class="row g-4 align-items-start">
+      <!-- Brand & About -->
+      <div class="col-md-4 text-center text-md-start">
+        <h3 class="fw-bold mb-3">
+          <span class="p">P</span><span class="a">A</span><span class="r">R</span><span class="e">E</span><span class="s">S</span>
+        </h3>
+        <p class="small mb-3">
+          Empowering lives through personalized therapy, expert care, and compassion-driven rehabilitation.
+        </p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 text-center">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <div class="footer-links">
+          <a href="#">Home</a><br>
+          <a href="#">About Us</a><br>
+          <a href="#">Services</a><br>
+          <a href="#">Packages</a><br>
+          <a href="#">Team</a><br>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 text-center text-md-end">
+        <h5 class="fw-bold mb-3">Get in Touch</h5>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> 123 Rehab Street, Lahore</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill"></i> info@pares.com</p>
+        <p class="mb-1"><i class="bi bi-telephone-fill"></i> +1 234 567 890</p>
+        <p><i class="bi bi-clock"></i> Mon – Fri: 9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom text-center py-3 mt-3">
+<small>
+  © 2025 PARES. All Rights Reserved. | PARES | Physiotherapy, Autism Rehabilitation, and Education Services | Designed & Developed ❤️ by Interstolix LLC
+</small>
+  </div>
+</footer>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
