@@ -665,6 +665,7 @@
 
 
 <!-- 🌟 Book Appointment Modal -->
+<!-- 🌟 Book Appointment Modal -->
 <div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content booking-modal shadow-lg rounded-4 border-0">
@@ -676,25 +677,25 @@
       </div>
 
       <div class="modal-body">
-        <form class="booking-form">
+        <form class="booking-form" id="bookingForm">
           <div class="mb-3">
             <label class="form-label fw-semibold">Full Name</label>
-            <input type="text" class="form-control" placeholder="Enter your full name" required>
+            <input type="text" name="fullName" class="form-control" placeholder="Enter your full name" required>
           </div>
 
           <div class="mb-3">
             <label class="form-label fw-semibold">Email Address</label>
-            <input type="email" class="form-control" placeholder="Enter your email" required>
+            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
           </div>
 
           <div class="mb-3">
             <label class="form-label fw-semibold">Phone Number</label>
-            <input type="tel" class="form-control" placeholder="+92 3XX XXXXXXX" required>
+            <input type="tel" name="phone" class="form-control" placeholder="+92 3XX XXXXXXX" required>
           </div>
 
           <div class="mb-3">
             <label class="form-label fw-semibold">Select Service</label>
-            <select class="form-select" required>
+            <select name="service" class="form-select" required>
               <option selected disabled>Choose a service...</option>
               <option>Physiotherapy</option>
               <option>Autism Rehabilitation</option>
@@ -706,29 +707,68 @@
 
           <div class="mb-3">
             <label class="form-label fw-semibold">Preferred Date</label>
-            <input type="date" class="form-control" required>
+            <input type="date" name="date" class="form-control" required>
           </div>
 
           <div class="mb-3">
             <label class="form-label fw-semibold">Additional Notes</label>
-            <textarea class="form-control" rows="3" placeholder="Any specific details..."></textarea>
+            <textarea name="notes" class="form-control" rows="3" placeholder="Any specific details..."></textarea>
           </div>
 
           <div class="text-center">
             <button type="submit" class="btn btn-book px-4">Submit Request</button>
           </div>
         </form>
+
+        <!-- Success message inside modal -->
+        <div id="formSuccess" class="alert alert-success text-center mt-3 d-none">
+          ✅ Your appointment request has been submitted successfully!
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
+<!-- 🌟 Form Submission Script -->
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault(); // prevent default submit
+  const form = e.target;
+  const data = new FormData(form);
+  const successMsg = document.getElementById("formSuccess");
 
+  fetch("https://script.google.com/macros/s/AKfycbyhsX4Z-AtCFBUhZPQ9b4CXIzNsjUslu5SX8qjqMivn65o_C2bRgY0MFdjusBl5haE9xg/exec", {
+    method: "POST",
+    body: new URLSearchParams(data)
+  })
+  .then(response => {
+    if(response.ok){
+      // Show success message
+      successMsg.classList.remove("d-none");
 
+      // Optional: scroll modal to top to make message visible
+      document.getElementById('bookModal').scrollTop = 0;
 
+      form.reset(); // Clear form inputs
 
+      // Optional: hide modal automatically after 3 seconds
+      // setTimeout(() => {
+      //   var modal = bootstrap.Modal.getInstance(document.getElementById('bookModal'));
+      //   modal.hide();
+      //   successMsg.classList.add("d-none");
+      // }, 3000);
 
+    } else {
+      alert("Error submitting form. Please try again.");
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Error submitting form. Please try again.");
+  });
+});
+</script>
 
 
 
