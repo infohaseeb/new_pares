@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PARES | Packages & Plans</title>
+<title>PARES Care | Therapy Packages & Plans</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -11,6 +11,25 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+<meta name="description" content="Discover PARES Care therapy packages and plans in Lahore. Choose from ABA therapy, speech therapy, occupational therapy, and physiotherapy sessions with flexible durations and monthly packages designed to enhance recovery, wellness, and skill development for all ages.">
+<meta name="keywords" content="Therapy Packages Lahore, ABA Therapy Packages, Speech Therapy Packages, Occupational Therapy Packages, Physiotherapy Packages, Monthly Therapy Plans, Child Development Packages, Autism Rehabilitation Packages, pares care, parescenter, Rehabilitation Center in Lahore">
+<meta name="author" content="Designed & Developed  by Interstolix ">
+<meta name="robots" content="index, follow">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </head>
 <body>
@@ -73,7 +92,7 @@
                         <a class="btn btn-feedback" href="#">Feedback</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="btn btn-book" href="#">Book Appointment</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
                     </li>
                 </ul>
             </div>
@@ -81,6 +100,110 @@
         
     </nav>
 
+<!-- 🌟 Book Appointment Modal -->
+<div class="modal fade" id="bookModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content booking-modal shadow-lg rounded-4 border-0">
+      <div class="modal-header border-0 pb-0">
+        <h4 class="fw-bold text-center w-100">
+          <span style="color:#d82236;">Book</span> Appointment
+        </h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form class="booking-form" id="bookingForm">
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Full Name</label>
+            <input type="text" name="fullName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Phone Number</label>
+            <input type="tel" name="phone" class="form-control" placeholder="+92 3XX XXXXXXX" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Select Service</label>
+            <select name="service" class="form-select" required>
+              <option selected disabled>Choose a service...</option>
+              <option>Physiotherapy</option>
+              <option>Autism Rehabilitation</option>
+              <option>Sports Injury Rehab</option>
+              <option>Speech Therapy</option>
+              <option>Occupational Therapy</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Preferred Date</label>
+            <input type="date" name="date" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Additional Notes</label>
+            <textarea name="notes" class="form-control" rows="3" placeholder="Any specific details..."></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-book px-4">Submit Request</button>
+          </div>
+        </form>
+
+        <!-- Success message inside modal -->
+        <div id="formSuccess" class="alert alert-success text-center mt-3 d-none">
+          ✅ Your appointment request has been submitted successfully!
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 🌟 Form Submission Script -->
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault(); // prevent default submit
+  const form = e.target;
+  const data = new FormData(form);
+  const successMsg = document.getElementById("formSuccess");
+
+  fetch("https://script.google.com/macros/s/AKfycbyhsX4Z-AtCFBUhZPQ9b4CXIzNsjUslu5SX8qjqMivn65o_C2bRgY0MFdjusBl5haE9xg/exec", {
+    method: "POST",
+    body: new URLSearchParams(data)
+  })
+  .then(response => {
+    if(response.ok){
+      // Show success message
+      successMsg.classList.remove("d-none");
+
+      // Optional: scroll modal to top to make message visible
+      document.getElementById('bookModal').scrollTop = 0;
+
+      form.reset(); // Clear form inputs
+
+      // Optional: hide modal automatically after 3 seconds
+      // setTimeout(() => {
+      //   var modal = bootstrap.Modal.getInstance(document.getElementById('bookModal'));
+      //   modal.hide();
+      //   successMsg.classList.add("d-none");
+      // }, 3000);
+
+    } else {
+      alert("Error submitting form. Please try again.");
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Error submitting form. Please try again.");
+  });
+});
+</script>
 
 
  <!-- 🌟 Packages & Plans Section -->
@@ -103,7 +226,7 @@
           <p class="price">Per Session: <span>1200 PKR</span></p>
           <p class="duration">Duration: 1 Hour</p>
           <p class="desc">Applied Behavior Analysis therapy that enhances communication, learning, and social interaction.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
 
@@ -117,7 +240,7 @@
           <p class="price">Per Session: <span>1500 PKR</span></p>
           <p class="duration">Duration: 1 Hour</p>
           <p class="desc">Boost communication and language skills with professional, friendly speech therapists.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
 
@@ -131,7 +254,7 @@
           <p class="price">Per Session: <span>1500 PKR</span></p>
           <p class="duration">Duration: 1 Hour</p>
           <p class="desc">Improve coordination, strength, and independence through engaging therapy activities.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
 
@@ -145,7 +268,7 @@
           <p class="price">Per Session: <span>1700 PKR</span></p>
           <p class="duration">Duration: 45 Minutes</p>
           <p class="desc">Restore mobility, reduce pain, and regain strength with certified physiotherapists.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
     </div>
@@ -182,7 +305,7 @@
           <div class="divider mx-auto mb-2"></div>
           <p class="price">Monthly: <span>25,000 PKR</span></p>
           <p class="desc">Perfect for consistent sessions and gradual improvement with personalized care.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
 
@@ -195,7 +318,7 @@
           <div class="divider mx-auto mb-2"></div>
           <p class="price">Monthly: <span>45,000 PKR</span></p>
           <p class="desc">Extended sessions for more focused and faster rehabilitation results.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
 
@@ -208,7 +331,7 @@
           <div class="divider mx-auto mb-2"></div>
           <p class="price">Monthly: <span>55,000 PKR</span></p>
           <p class="desc">Comprehensive sessions designed for maximum progress and lasting benefits.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
 
@@ -221,7 +344,7 @@
           <div class="divider mx-auto mb-2"></div>
           <p class="price">Monthly: <span>65,000 PKR</span></p>
           <p class="desc">All-day support for intensive therapy and holistic care experience.</p>
-          <a href="#book" class="btn btn-book-now mt-2">Book Now</a>
+<a class="btn btn-book" href="#" data-bs-toggle="modal" data-bs-target="#bookModal">Book Appointment</a>
         </div>
       </div>
     </div>

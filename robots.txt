@@ -1,0 +1,7 @@
+# robots.txt for PARES Care Website
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+Sitemap: https://pares.pk/sitemap.xml
